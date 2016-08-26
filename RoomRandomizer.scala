@@ -6,7 +6,7 @@ object Sets extends Enumeration {
 }
 import Sets._
 
-class Board(_id: Integer, _set: Sets, _name: String, _numObstacles: Integer) {
+class Board(_id: Int, _set: Sets, _name: String, _numObstacles: Int) {
   def id = _id
   def set = _set
   def name = _name
@@ -28,19 +28,23 @@ class Room() {
 */
 
 object RoomRandomizer {
-  def getBoards = {
+
+  def getBoards : collection.mutable.Map[Int, Board] = {
     val src = Source.fromFile("./data/boards.csv")
     val iter = src.getLines().drop(1).map(_.split(","))
-    // iter foreach(a => println(a(0)+" "+a(2)))
     // TODO: figure out if reading header can be used to figure out the column needed
-    var Boards = collection.mutable.Map[Int, Board]()
-    iter foreach(a => Boards += (a(0).toInt -> new Board(a(0).toInt, Base, a(2), a(3).toInt)))
 
-    for(b <- Boards) println(b)
-    Boards foreach(a => println(a))
+    val boards = collection.mutable.Map[Int, Board]()
+    iter foreach(a => boards += (a(0).toInt -> new Board(_id = a(3).toInt, Base, a(2), _numObstacles = a(0).toInt)))
+
+    return boards
   }
 
   def main(args: Array[String]) {
-    getBoards
+    val Boards = getBoards
+
+    // Boards foreach(a => println(a._2))
+
+    println(Boards get 5)
   }
 }
