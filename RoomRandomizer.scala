@@ -31,10 +31,14 @@ object RoomRandomizer {
   def getBoards = {
     val src = Source.fromFile("./data/boards.csv")
     val iter = src.getLines().drop(1).map(_.split(","))
-    iter foreach(a => println(a(0)+" "+a(2)))
+    // iter foreach(a => println(a(0)+" "+a(2)))
     // TODO: figure out if reading header can be used to figure out the column needed
-    // var Boards:Map[Integer, Board] = Map()
-    // iter foreach(a => Boards + = (a(0) -> new Board(a(0), a(1), a(2), a(3))))
+    var Boards:Map[Int, Board] = Map()
+    // iter foreach(a => Boards + (a(0) -> new Board(a(0), a(1), a(2), a(3))))
+    iter foreach(a => Boards + (a(0).toInt -> new Board(a(0).toInt, Base, a(2), a(3).toInt)))
+
+    Boards foreach(a => println(a))
+    println ("TEST")
   }
 
   def main(args: Array[String]) {
