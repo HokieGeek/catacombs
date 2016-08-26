@@ -39,6 +39,10 @@ object RoomRandomizer {
 
     Boards foreach(a => println(a))
     println ("TEST")
+    println(Boards get 1)
+
+    val Boards2 = Map(1 -> "Uno", 2 -> "Dos", 3 -> "Tres")
+    println(Boards2 get 1)
   }
 
   def main(args: Array[String]) {
