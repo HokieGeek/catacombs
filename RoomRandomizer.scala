@@ -33,10 +33,12 @@ object RoomRandomizer {
     val iter = src.getLines().drop(1).map(_.split(","))
     // iter foreach(a => println(a(0)+" "+a(2)))
     // TODO: figure out if reading header can be used to figure out the column needed
-    var Boards:Map[Int, Board] = Map()
+    // var Boards:Map[Int, Board] = Map()
+    var Boards = Map[Int, Board]()
     // iter foreach(a => Boards + (a(0) -> new Board(a(0), a(1), a(2), a(3))))
     iter foreach(a => Boards + (a(0).toInt -> new Board(a(0).toInt, Base, a(2), a(3).toInt)))
 
+    for(b <- Boards) println(b)
     Boards foreach(a => println(a))
     println ("TEST")
     println(Boards get 1)
