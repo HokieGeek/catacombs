@@ -6,14 +6,12 @@ object Sets extends Enumeration {
 }
 import Sets._
 
-class Board(_id: Int, _set: Sets, _name: String, _numObstacles: Int) {
-  def id = _id
-  def set = _set
+class Board(_name: String, _set: Sets, _numObstacles: Int) {
   def name = _name
+  def set = _set
   def numObstacles = _numObstacles
 
-  override def toString() =
-    "[" + id + "] " + name + " / " + numObstacles + " (" + set + ")"
+  override def toString() = name + " / " + numObstacles + " (" + set + ")"
 }
 
 /*
@@ -35,7 +33,7 @@ object RoomRandomizer {
     // TODO: figure out if reading header can be used to figure out the column needed
 
     val boards = collection.mutable.Map[Int, Board]()
-    iter foreach(a => boards += (a(0).toInt -> new Board(_id = a(3).toInt, Base, a(2), _numObstacles = a(0).toInt)))
+    iter foreach(a => boards += (a(0).toInt -> new Board(_name = a(2), _set = Base, _numObstacles = a(0).toInt)))
 
     return boards
   }
