@@ -5,5 +5,7 @@ object RoomRandomizer {
     Collection.Boards.foreach(a => println(a))
     println("[MONSTERS]")
     Collection.Monsters.foreach(a => println(a))
+    println("[THINGS]")
+    // Collection.Things.foreach(a => println(a))
   }
 }
