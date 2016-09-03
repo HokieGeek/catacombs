@@ -1,38 +1,32 @@
 import scala.io.Source
 
-object Sets extends Enumeration {
-  type Sets = Value
-  val Base = Value("Base")
-  val Soloth = Value("Soloth")
-  val Vermin = Value("Vermin")
-}
-import Sets._
-
 class Thing(fields: Array[String], entry: Array[String]) {
   def get(field: String) = entry(fields indexOf field)
-  override def toString() = get("Name")
+  override def toString() = get("Name") + " (" + get("Set") + ")"
 }
 
 object ThingFactory {
-  def createThingMap(fields: Array[String], iter: Iterator[Array[String]]) : Map[Int, Thing] = {
-    var things = Map[Int, Thing]()
-    iter foreach(a => things = things + (a(0).toInt -> new Thing(fields, a)))
+  def createThingMap(fields: Array[String], iter: Iterator[Array[String]]) : Map[String, Thing] = {
+    var things = Map[String, Thing]()
+    for (a <- iter) {
+      var thing = new Thing(fields, a)
+      things = things + (thing.get("Name") -> thing)
+    }
+    // iter foreach(a => things = things + (a(0).toInt -> new Thing(fields, a)))
 
     return things
   }
 }
 
 object Collection {
-
-  def getThings(file: String) : Map[Int, Thing] = {
+  def getThings(file: String) : Map[String, Thing] = {
     val src = Source.fromFile(file)
-    val fields = src.getLines().take(1).map(_.split(",")).toArray
-    // return ThingFactory.createThingMap(src.getLines().take(1).map(_.split(",")).toArray(),
-    return ThingFactory.createThingMap(fields(0),
-                                       src.getLines().drop(1).map(_.split(",")))
+    val fields = src.getLines().take(1).map(_.split('\t')).toArray
+    return ThingFactory.createThingMap(fields(0), src.getLines().map(_.split('\t')))
   }
 
-  val Boards = getThings("./data/boards.csv")
-  val Monsters = getThings("./data/monsters.csv")
-  // val Lords = getThings("./data/lords.csv")
+  val Boards = getThings("./data/boards.tsv")
+  val Monsters = getThings("./data/monsters.tsv")
+  val Lords = getThings("./data/lords.tsv")
+  val Rooms = getThings("./data/rooms.tsv")
 }
