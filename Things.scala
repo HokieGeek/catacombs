@@ -1,11 +1,6 @@
 import scala.io.Source
 
-class Thing(fields: Array[String], entry: Array[String]) {
-  def get(field: String) = entry(fields indexOf field)
-  override def toString() = get("Name") + " (" + get("Set") + ")"
-}
-
-object ThingFactory {
+object Things {
   def createThingMap(fields: Array[String], iter: Iterator[Array[String]]) : Map[String, Thing] = {
     var things = Map[String, Thing]()
     for (a <- iter) {
@@ -16,13 +11,11 @@ object ThingFactory {
 
     return things
   }
-}
 
-object Collection {
   def getThings(file: String) : Map[String, Thing] = {
     val src = Source.fromFile(file)
     val fields = src.getLines().take(1).map(_.split('\t')).toArray
-    return ThingFactory.createThingMap(fields(0), src.getLines().map(_.split('\t')))
+    return createThingMap(fields(0), src.getLines().map(_.split('\t')))
   }
 
   def printRoom(thing: Thing) = {
