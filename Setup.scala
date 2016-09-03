@@ -13,14 +13,15 @@
 object Setup {
   def main(args: Array[String]) {
 
-    // println("[BOARDS]")
-    // Collection.Boards.foreach(a => println(a._2))
+    println("[BOARDS]")
+    // Things.Boards.foreach(a => println(a._2.get("Name")))
+    Things.Boards.foreach(a => println(a._2("Name")))
     // println("[MONSTERS]")
-    // Collection.Monsters.foreach(a => println(a._2))
+    // Things.Monsters.foreach(a => println(a._2))
     // println("[LORDS]")
-    // Collection.Lords.foreach(a => println(a._2))
-    println("[ROOMS]")
-    Things.Rooms.foreach(a => Things.printRoom(a._2))
-    // Collection.Rooms.foreach(a => println(a._2))
+    // Things.Lords.foreach(a => println(a._2))
+    // println("[ROOMS]")
+    // Things.Rooms.foreach(a => Things.printRoom(a._2))
+    // Things.Rooms.foreach(a => println(a._2))
   }
 }
