@@ -1,0 +1,9 @@
+Name	Set	Health	Wanderer	Special Action
+Sorcerer	Base	4	Zombie	Stun
+Gorgon	Base	5	Skeleton Archer	Critical Melee > Stun Missile
+Lich	Base	5	Skeleton Warrior	Melee > Missile
+Dragon	Base	8	Fire Spirit	Summon Spirit OR Melee > Missile OR Melee chain x3
+Queen of the Underworld	Soloth	6	Wight	Special > Melee > Melee
+Hydra	Soloth	7	Skeleton Archer	[6+ HP = Melee > Critical Melee] [5-4 HP = Melee > Fireball > Melee > Fireball] [1-3 HP = Melee > Critical Melee > Critical Melee]
+Shapeshifter	Soloth	6	Fire Spirit	Melee > Shape Special
+Orc Warchief	Soloth	6	Orc	Melee > Critical Melee

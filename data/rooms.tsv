@@ -1,0 +1,111 @@
+Name	Set	Type	Level	N	E	S	W	Special
+Catacomb Lord	Base	Special	-1	1	1	1	1	
+Vysara, The Healer	Base	Special	-1	1	1	1	1	
+Althea, The Healer	Base	Special	-1	1	1	1	1	
+Izchak, The Merchant	Base	Special	-1	1	1	1	1	
+Beeble, The Merchant	Soloth	Special	-1	1	1	1	1	
+Altar of Soloth	Soloth	Special	-1	1	1	1	1	
+Maireya, The Healer	Vermin	Special	-1	1	1	1	1	
+The Outer Bailey	Base	Battle	0	1	1	1	1	
+Sarhlat Antechamber	Base	Battle	0	1	1	1	1	
+Zotha's Gatehouse	Base	Battle	0	1	1	1	1	
+Bholoth Cemetery	Base	Battle	0	1	1	1	1	
+Stoneloth Crossroads	Base	Battle	1	1	1	1	1	
+Forbidden Ossuary	Base	Battle	1	1	1	1	1	
+Ashata	Base	Battle	1	1	1	1	1	
+The Scavewyrm Pit	Base	Battle	1	0	1	1	1	
+Hidden Passageway	Base	Battle	1	0	1	0	1	
+Chagnar's Lair	Base	Battle	1	1	1	0	1	
+Forge of Gnoth	Base	Battle	1	1	1	1	1	
+Colonnade of Chaos	Base	Battle	1	1	1	1	1	
+Vault of Whispers	Base	Battle	1	1	1	1	0	
+Moghath	Base	Battle	1	1	0	1	1	
+The Barracks	Base	Battle	1	1	0	0	1	
+Mosarr Ironworks	Base	Battle	1	1	1	1	1	
+The Cavern of Torhak	Base	Battle	1	1	1	1	1	
+The Armoury	Base	Battle	1	0	1	0	1	
+Stormtryne Hall	Base	Battle	1	1	0	1	0	
+The Isthalle Portal	Base	Battle	1	0	1	1	0	
+Phoitar	Base	Battle	1	0	0	1	1	
+Larkwrayth Prison	Base	Battle	1	1	1	1	1	
+Summoning Chamber	Base	Battle	1	1	1	0	0	
+Merulian Waste	Base	Battle	1	1	0	1	0	
+Sagomot	Base	Battle	2	0	1	0	1	
+Monoliths to Xokarst	Base	Battle	2	1	1	1	1	
+Stelloth Crematorium	Base	Battle	2	1	1	0	1	
+Krhlot	Base	Battle	2	1	1	1	1	
+The Athenoch Mortuary	Base	Battle	2	1	0	1	1	
+Sepulcher of the Sisters	Base	Battle	2	0	1	1	1	
+Tomb of Kings	Base	Battle	2	1	1	1	1	
+Chomatha Bridge	Base	Battle	2	1	0	1	0	
+Lalothost Crypts	Base	Battle	2	1	1	1	1	
+Vaiel's Manse	Base	Battle	2	1	1	1	0	
+The Secret Staircase	Soloth	Battle	0	1	1	1	1	
+The Battlements	Soloth	Battle	0	1	1	1	1	
+The Culvert	Vermin	Battle	0	1	1	1	1	
+Pyramid of Omens	Soloth	Battle	1	1	1	0	0	
+Crypt of Shaurath	Soloth	Battle	1	1	0	1	1	
+The Urcak Pit	Soloth	Battle	1	1	1	1	1	
+Matinya's Cellar	Soloth	Battle	1	0	1	0	1	
+The Sewer Tunnels	Soloth	Battle	1	1	1	1	1	
+Orsharsh Graveyard	Soloth	Battle	1	1	1	0	1	
+Chalmor Arena	Soloth	Battle	1	1	0	1	1	
+The Lekraith Tomb	Soloth	Battle	1	0	0	1	1	
+Korog Stronghold	Soloth	Battle	1	1	0	0	1	
+Barothir Swamp	Soloth	Battle	1	1	1	1	1	
+Nothoru Crossing	Soloth	Battle	1	1	1	1	1	
+Tromsarth Hall	Soloth	Battle	1	1	0	1	0	
+Dorill Cave	Soloth	Battle	1	1	1	1	1	
+Cave of the Blood Scribes	Soloth	Battle	1	0	1	1	1	
+Malvarn Grotto	Soloth	Battle	1	0	1	1	0	
+Flooded Shrine	Soloth	Battle	1	1	1	1	1	
+Abbos Lookout	Vermin	Battle	1	1	1	1	1	
+Bloodsworn Crypt	Vermin	Battle	1	1	1	1	1	
+Forthstron River	Vermin	Battle	1	0	1	1	0	
+Shannotul	Vermin	Battle	1	1	1	1	1	
+The Mitholaq Hive	Vermin	Battle	1	1	1	0	0	
+The Scullery	Vermin	Battle	1	1	0	0	1	
+The Storeroom	Vermin	Battle	1	0	0	1	1	
+Phaugatt Mine	Vermin	Battle	1	1	1	1	1	
+Ruined Sanctuary	Vermin	Battle	1	1	0	1	1	
+The Vermin Hovel	Vermin	Battle	1	1	1	1	0	
+Fetid Aqueduct	Vermin	Battle	1	1	1	0	1	
+Wychward Burrow	Vermin	Battle	1	0	1	1	1	
+The Lava Pools	Vermin	Battle	1	1	1	1	1	
+Sarhologh	Vermin	Battle	1	1	0	1	0	
+Oakhearth Hall	Vermin	Battle	1	0	1	0	1	
+Fortress of Nale	Soloth	Battle	2	1	1	1	1	
+Temple of Yagotha	Soloth	Battle	2	1	1	1	1	
+The Covert Monument	Soloth	Battle	2	1	1	1	0	
+Sacthar Cenotaph	Soloth	Battle	2	1	1	1	1	
+Ursastha	Soloth	Battle	2	0	1	0	1	
+The Breeding Pits	Soloth	Battle	2	0	1	0	1	
+Nolothag Dungeon	Soloth	Battle	2	1	1	1	1	
+Cavern of Soloth	Soloth	Battle	2	1	1	1	1	
+Labyrinth of Visions	Soloth	Battle	2	1	0	1	0	
+The Phaoslay Realm	Soloth	Battle	2	1	1	0	1	
+Castle Mephoth	Soloth	Battle	2	1	0	1	1	
+Nest of Vipers	Vermin	Battle	2	1	0	1	0	
+Ersothak's Keep	Vermin	Battle	2	0	1	0	1	
+Qurlathorm	Vermin	Battle	2	1	1	1	1	
+Lair of the Cormarel	Vermin	Battle	2	1	1	1	1	
+Lysolath	Vermin	Battle	2	1	1	0	1	
+M'othole Cemetery	Vermin	Battle	2	0	1	1	1	
+Necrogoragion	Vermin	Battle	2	1	1	1	0	
+Alewife Tavern	Passageways	Passageway	1	-1	-1	-1	-1	Buy items
+Amaranth Healing Spring	Passageways	Passageway	1	-1	-1	-1	-1	Gain health
+Ambush!	Passageways	Passageway	1	-1	-1	-1	-1	Overseer starts
+Cave In	Passageways	Passageway	1	-1	-1	-1	-1	Heroes and monsters start incapaciated randomly
+Chagnar's Wrath	Passageways	Passageway	1	-1	-1	-1	-1	Skeleton Warriors (add 3 if none) have stun melee
+Dark Passage	Passageways	Passageway	1	-1	-1	-1	-1	Skip to catacomb lord :(
+Den of Thieves	Passageways	Passageway	1	-1	-1	-1	-1	Monsters steal 100 gold when they hit
+Hall of Mirrors	Passageways	Passageway	1	-1	-1	-1	-1	All monsters are Incorporeal
+Raiders from Sagomot	Passageways	Passageway	1	-1	-1	-1	-1	
+Rampage!	Passageways	Passageway	1	-1	-1	-1	-1	Overseer chooses a monster type that will take AN extra melee shot
+Stoneloth Shields	Passageways	Passageway	1	-1	-1	-1	-1	Dungeon monsters gain Retaliation. Add 1 dungeon monster if none.
+Vaiel's Archers	Passageways	Passageway	1	-1	-1	-1	-1	Before resolution, add two centaurs or one cerberus at hero start zone and engage in battle.
+Help from Beyond	Passageways	Passageway	2	-1	-1	-1	-1	Heroes choose 3 monsters types; they cannot appear in next room
+Horde of Vermin	Passageways	Passageway	2	-1	-1	-1	-1	Before resolution, add 6 non-frenzy zombies to hero start zone
+Sneak Attack	Passageways	Passageway	2	-1	-1	-1	-1	Overseer loses first turn
+Summoning Ritual	Passageways	Passageway	2	-1	-1	-1	-1	Overseer swaps out two monsters
+The Fires of Xokarst	Passageways	Passageway	2	-1	-1	-1	-1	Infernal monsters take extra fireball shot. Add 1 if none.

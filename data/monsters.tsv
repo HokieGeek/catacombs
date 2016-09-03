@@ -1,0 +1,38 @@
+Name	Set	Class	Health	Reward	Special Ability	Actions
+[WANDERING]	Base	-	-	-	-	-
+Dread Scorpion	Vermin	Dungeon	2	300		Melee > Poison melee
+Giant Scorpion	Base	Dungeon	2	200		Critical Melee
+Lizard Man	Soloth	Dungeon	2	200	Slave Master, Retaliation	Melee
+Orc	Base	Dungeon	2	100		Melee
+Orc Wolf Rider	Soloth	Dungeon	2, mount	300	Mounted Unit	(Melee > Melee) OR Missile
+Troll	Base	Dungeon	2	200	Regeneration	Melee
+Fire Demon	Base	Infernal	2	300	Absorption	Melee OR (Fireball > Fireball)
+Fire Spirit	Base	Infernal	1	100	Fire Wall	Melee
+Infernal Acolyte	Soloth	Infernal	2	100	Volcanism	Melee
+Phoenix	Soloth	Infernal	2	3, feather	Resurrection, Wellspring	Melee
+Salamander	Soloth	Infernal	2	200		Melee OR Fireball
+Centaur	Base	Mythological	2	200		Melee > Missile
+Cerberus	Base	Mythological	2	300		Melee > Missile > Missile
+Gargoyle	Soloth	Mythological	2	100	Evasion	Melee
+Manticore	Soloth	Mythological	2	300		Melee > Fireball > Melee
+Minotaur	Base	Mythological	2	200	Retaliation	Melee
+Savage Centaur	Vermin	Mythological	2	200		Melee > Poison missile
+Siren	Soloth	Mythological	2	200	Suppression	Melee
+Crypt Spider	Base	Undead	2	300	Misile shots do no damage	Melee > Stun missile > Stun missile
+Dire Ghoul	Vermin	Undead	2	300		Fear melee > Fear melee
+Elder Vampire	Vermin	Undead	4	500	Stamina, Summon Vermin	Melee > (Stun missile OR Fear missile)
+Ghoul	Base	Undead	2	200		Stun Melee
+Shade	Soloth	Undead	1	200	Incorporeal	Stun Melee
+Skeleton Archer	Base	Undead	1	100		Melee OR Missile
+Skeleton Warrior	Base	Undead	1	100		Melee
+Vampire	Soloth	Undead	2	200	Regeneration	Stun Melee > Summon Skeleton Warrior
+Venomous Spider	Vermin	Undead	2	400	Lethal	Stun missile > Poison missile
+Wight	Soloth	Undead	1	100	Touch of Decay	Melee
+Zombie	Base	Undead	1	100	Feeding Frenzy	Melee
+Armoured Beetle	Vermin	Vermin	2	100		Melee
+Blood Skull	Vermin	Vermin	1	100	Incorporeal	Fear melee
+Pit Viper	Vermin	Vermin	1	200	Lethal	Poison melee
+Remorhaz	Vermin	Vermin	5	700	Stamina, Absorption, Devourer	Melee > Stun melee
+Sewer Rat	Vermin	Vermin	1	0	Weak, Swarm	Melee
+Vampire Bat	Vermin	Vermin	1	100	Feeding Frenzy	Melee > Melee
+Wyvern	Vermin	Vermin	4	500	Stamina	Poison melee > Critical fireball
