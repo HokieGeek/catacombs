@@ -25,8 +25,15 @@ object Collection {
     return ThingFactory.createThingMap(fields(0), src.getLines().map(_.split('\t')))
   }
 
+  def printRoom(thing: Thing) = {
+    println(thing)
+  }
+
   val Boards = getThings("./data/boards.tsv")
   val Monsters = getThings("./data/monsters.tsv")
   val Lords = getThings("./data/lords.tsv")
   val Rooms = getThings("./data/rooms.tsv")
+
+  // val roomBoards = getThings("./data/rooms-boards.tsv")
+  // val roomMonsters = getThings("./data/rooms-monsters.tsv")
 }
