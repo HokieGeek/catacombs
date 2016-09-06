@@ -1,34 +1,35 @@
 import scala.io.Source
 
 object Things {
-  // def loadFile(file:String) : (Array[String], Iterator[Array[String]]) = {
-  //   val iter = Source.fromFile(file).getLines().map(_.split('\t'))
-  //   return (iter.next(), iter)
-  // }
+  def loadFile(file:String) : (Array[String], Iterator[Array[String]]) = {
+    val iter = Source.fromFile(file).getLines().map(_.split('\t'))
+    return (iter.next(), iter)
+  }
 
   def getThings(file: String) : Map[String, Map[String, String]] = {
-    // val (fields, iter) = loadFile(file)
-    val iter = Source.fromFile(file).getLines().map(_.split('\t'))
-    val fields = iter.next()
+    val (fields, iter) = loadFile(file)
 
+    // iter foldLeft(Map[String, Map[String, String]]()) ((t, a) => t + (a(fields indexOf "Name") -> fields.zip(a).toMap))
     var things = Map[String, Map[String, String]]()
     iter foreach(a => things = things + (a(fields indexOf "Name") -> fields.zip(a).toMap))
     return things
   }
 
   def getRelationships(file: String) : Map[String, List[String]] = {
-    // val (fields, iter) = loadFile(file)
-    val iter = Source.fromFile(file).getLines().map(_.split('\t'))
-    val fields = iter.next()
+    val (fields, iter) = loadFile(file)
 
     var m = Map[String, List[String]]()
 
-    iter foreach(r => r.map(a =>(a(0).toString, a(1).toString))
-      .groupBy(_._1).mapValues(_.map(_._2)))
+    // iter foreach(r => r.map(a =>(a(0).toString, a(1).toString))
+    //   .groupBy(_._1).mapValues(_.map(_._2)))
 
     // for (a <- iter) {
-    //   m = m + (a(0) -> m(a(0)) ++ a(1))
-    //   // m = m + (a(0) -> List())
+    //   // var vals
+    //   if (m contains a(0)) {
+    //     val l = List(m(a(0)), a(1))
+    //     m = m + (a(0) -> l)
+    //   }
+    // //   // m = m + (a(0) -> List())
     // }
 
     return m

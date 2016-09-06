@@ -14,7 +14,8 @@ object Setup {
   def main(args: Array[String]) {
 
     // println("[BOARDS]")
-    Things.Boards.foreach(a => println(a._2.get("Name")))
+    // Things.Boards.foreach(a => println(a._2.get("Name")))
+    Things.Boards.foreach(a => println(a._2))
 
     // println("[ROOMS]")
     // Things.Rooms.foreach(a => Things.printRoom(a._2))
