@@ -23,14 +23,14 @@ object Things {
     // iter foreach(r => r.map(a =>(a(0).toString, a(1).toString))
     //   .groupBy(_._1).mapValues(_.map(_._2)))
 
-    // for (a <- iter) {
-    //   // var vals
-    //   if (m contains a(0)) {
-    //     val l = List(m(a(0)), a(1))
-    //     m = m + (a(0) -> l)
-    //   }
-    // //   // m = m + (a(0) -> List())
-    // }
+    // Imperative solution
+    for (a <- iter) {
+      if (m contains a(0)) {
+        m = (m - a(0)) + (a(0) -> (m(a(0)) ::: List(a(1))))
+      } else {
+        m = m + (a(0) -> List(a(1)))
+      }
+    }
 
     return m
   }
@@ -39,22 +39,21 @@ object Things {
     // Print name, set and board
     printf("%s [%s]", thing("Name"), thing("Set"))
 
-    // if (roomBoards contains thing("Name"))
-    //   printf(" on %s", roomBoards(thing("Name"))("Board"))
-
+    if (roomBoards contains thing("Name"))
+      printf(" on %s", roomBoards(thing("Name")).head)
     println()
 
     // Print monsters
-    // TODO
+    roomMonsters getOrElse (thing("Name"), Nil) foreach(a => printf("   %s\n", a))
   }
 
-  val Boards = getThings("./data/boards.tsv")
+  val Boards   = getThings("./data/boards.tsv")
   val Monsters = getThings("./data/monsters.tsv")
-  val Lords = getThings("./data/lords.tsv")
-  val Rooms = getThings("./data/rooms.tsv")
+  val Lords    = getThings("./data/lords.tsv")
+  val Rooms    = getThings("./data/rooms.tsv")
 
   val roomBoards = getRelationships("./data/rooms-boards.tsv")
-  // val roomMonsters = getRelationships("./data/rooms-monsters.tsv")
+  val roomMonsters = getRelationships("./data/rooms-monsters.tsv")
 
   // val lordBoards = getThings("./data/lords-boards.tsv")
   // val lordMonsters = getThings("./data/lords-monsters.tsv")
