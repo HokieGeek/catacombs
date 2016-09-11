@@ -47,14 +47,13 @@ object Things {
     roomMonsters getOrElse (thing("Name"), Nil) foreach(a => printf("   %s\n", a))
   }
 
-  val Boards   = getThings("./data/boards.tsv")
-  val Monsters = getThings("./data/monsters.tsv")
-  val Lords    = getThings("./data/lords.tsv")
-  val Rooms    = getThings("./data/rooms.tsv")
+  val Boards   = getThings("data/boards.tsv")
+  val Monsters = getThings("data/monsters.tsv")
+  val Lords    = getThings("data/lords.tsv")
+  val Rooms    = getThings("data/rooms.tsv")
 
-  val roomBoards = getRelationships("./data/rooms-boards.tsv")
-  val roomMonsters = getRelationships("./data/rooms-monsters.tsv")
-
-  // val lordBoards = getThings("./data/lords-boards.tsv")
-  // val lordMonsters = getThings("./data/lords-monsters.tsv")
+  val roomBoards   = getRelationships("data/rooms-boards.tsv")
+  val roomMonsters = getRelationships("data/rooms-monsters.tsv")
+  val lordBoards   = getRelationships("data/lords-boards.tsv")
+  val lordMonsters = getRelationships("data/lords-monsters.tsv")
 }
