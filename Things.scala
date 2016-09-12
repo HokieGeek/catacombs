@@ -20,9 +20,6 @@ object Things {
 
     var m = Map[String, List[String]]()
 
-    // iter foreach(r => r.map(a =>(a(0).toString, a(1).toString))
-    //   .groupBy(_._1).mapValues(_.map(_._2)))
-
     // Imperative solution
     for (a <- iter) {
       if (m contains a(0)) {
@@ -35,25 +32,31 @@ object Things {
     return m
   }
 
-  def printRoom(thing: Map[String, String]) = {
+  def print(thing: Map[String, String]) = {
     // Print name, set and board
-    printf("%s [%s]", thing("Name"), thing("Set"))
+    printf("%s [%s, %s, %s]", thing("Name"), thing("Level"), thing("Type"), thing("Set"))
 
-    if (roomBoards contains thing("Name"))
-      printf(" on %s", roomBoards(thing("Name")).head)
+    if (RoomBoards contains thing("Name"))
+      printf(" on %s", RoomBoards(thing("Name")).head)
     println()
 
     // Print monsters
-    roomMonsters getOrElse (thing("Name"), Nil) foreach(a => printf("   %s\n", a))
+    RoomMonsters getOrElse (thing("Name"), Nil) foreach(a => printf("   %s\n", a))
   }
+
+  // ... just because I can... ?
+  val filter = (t: Map[String, Map[String, String]], f: String, v: String) => t.filter((a) => a._2(f) == v)
+  // def filter(things: Map[String, Map[String, String]], field: String, value: Any) : Map[String, Map[String, String]] = {
+  //   things.filter((t) => t._2(field) == value)
+  // }
 
   val Boards   = getThings("data/boards.tsv")
   val Monsters = getThings("data/monsters.tsv")
   val Lords    = getThings("data/lords.tsv")
   val Rooms    = getThings("data/rooms.tsv")
 
-  val roomBoards   = getRelationships("data/rooms-boards.tsv")
-  val roomMonsters = getRelationships("data/rooms-monsters.tsv")
-  val lordBoards   = getRelationships("data/lords-boards.tsv")
-  val lordMonsters = getRelationships("data/lords-monsters.tsv")
+  val RoomBoards   = getRelationships("data/rooms-boards.tsv")
+  val RoomMonsters = getRelationships("data/rooms-monsters.tsv")
+  val LordBoards   = getRelationships("data/lords-boards.tsv")
+  val LordMonsters = getRelationships("data/lords-monsters.tsv")
 }
