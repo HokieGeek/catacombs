@@ -6,6 +6,9 @@ import RoomType._
 
 object Setup extends App {
   // def randomRoom(roomType: RoomType, level: String) : Map[String, String] = {
+  //   case (Battle, level) = Things.filter(Things.filter(Things.Rooms, "Type", "Battle"), "Level", level)
+  //   case (Healer, level) = Things.filter(Things.filter(Things.Rooms, "Type", "Special"), "Name", "*Healer*")
+  //   case (Merchant, level) = 
   //   Things.filter(Things.filter(Things.Rooms, "Type", roomType.toString), "Level", level)
   // }
 
@@ -25,9 +28,12 @@ object Setup extends App {
     // Things.Rooms.filter((t) => t._2("Type") == "Special").foreach(a => Things.print(a._2))
     // Things.RoomFilter("Type", "Special").foreach(a => Things.print(a._2))
     // Things.Rooms.filter((t) => t._2("Level") == "0").foreach(a => Things.print(a._2))
+    println("Level 0 Rooms: ")
     Things.filter(Things.Rooms, "Level", "0").foreach(a => Things.print(a._2))
+    println("Healers: ")
+    Things.filter(Things.filter(Things.Rooms, "Type", "Special"), "Name", "Healer").foreach(a => Things.print(a._2))
     // randomRoom foreach println
-    // Things.filter(Things.filter(Things.Rooms, "Type", Battle), "Level", 0) foreach println
+    // Things.filter(Things.filter(Things.Rooms, "Type", Battle), "Level", "0") foreach println
   }
 
   Basic()
