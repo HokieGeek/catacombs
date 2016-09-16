@@ -45,10 +45,7 @@ object Things {
   }
 
   // ... just because I can... ?
-  val filter = (t: Map[String, Map[String, String]], f: String, v: String) => t.filter((a) => a._2(f) == v)
-  // def filter(things: Map[String, Map[String, String]], field: String, value: Any) : Map[String, Map[String, String]] = {
-  //   things.filter((t) => t._2(field) == value)
-  // }
+  val filter = (t: Map[String, Map[String, String]], f: String, v: String) => t.filter((a) => a._2(f) contains v)
 
   val Boards   = getThings("data/boards.tsv")
   val Monsters = getThings("data/monsters.tsv")
