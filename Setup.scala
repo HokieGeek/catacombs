@@ -14,9 +14,7 @@ object Setup extends App {
 
   def randomRoom(roomType: RoomType, level: Int = -1) : Map[String, String] = {
     val r = roomsByType(roomType, level)
-    // println(scala.util.Random.shuffle(r.keys))
-    // println(scala.util.Random.shuffle(r.keys).head)
-    r.getOrElse(scala.util.Random.shuffle(r.keys).head, r.head._2)
+    r.getOrElse(scala.util.Random.shuffle(r.keys.toList).head, r.head._2)
   }
 
   def Basic() {
@@ -34,11 +32,13 @@ object Setup extends App {
 
     // TODO: ensure no dupes
 
-    println("Level 0 Room: ")
     Things.print(randomRoom(Battle, level = 0))
-
-    println("Healer: ")
+    Things.print(randomRoom(Battle, level = 1))
+    Things.print(randomRoom(Merchant))
+    Things.print(randomRoom(Battle, level = 1))
+    Things.print(randomRoom(Battle, level = 1))
     Things.print(randomRoom(Healer))
+    Things.print(randomRoom(Battle, level = 2))
   }
 
   Basic()
