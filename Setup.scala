@@ -5,13 +5,18 @@ object RoomType extends Enumeration {
 import RoomType._
 
 object Setup extends App {
-  // def randomRoom(roomType: RoomType, level: Int = -1) : Map[String, String] = {
-  def randomRoom(roomType: RoomType, level: Int = -1) : Map[String, Map[String, String]] = {
+  def roomsByType(roomType: RoomType, level: Int = -1) : Map[String, Map[String, String]] = {
     roomType match {
       case Battle => Things.filter(Things.filter(Things.Rooms, "Type", "Battle"), "Level", level.toString)
-      case Healer => Things.filter(Things.filter(Things.Rooms, "Type", "Special"), "Name", roomType.toString)
-      case Merchant => Things.filter(Things.filter(Things.Rooms, "Type", "Special"), "Name", roomType.toString)
+      case special => Things.filter(Things.filter(Things.Rooms, "Type", "Special"), "Name", special.toString)
     }
+  }
+
+  def randomRoom(roomType: RoomType, level: Int = -1) : Map[String, String] = {
+    val r = roomsByType(roomType, level)
+    // println(scala.util.Random.shuffle(r.keys))
+    // println(scala.util.Random.shuffle(r.keys).head)
+    r.getOrElse(scala.util.Random.shuffle(r.keys).head, r.head._2)
   }
 
   def Basic() {
@@ -27,13 +32,13 @@ object Setup extends App {
      * 8. Catacomb Lord
      */
 
-    // scala.util.Random.nextInt(NUM)
+    // TODO: ensure no dupes
 
-    println("Level 0 Rooms: ")
-    randomRoom(Battle, level = 0).foreach(a => Things.print(a._2))
+    println("Level 0 Room: ")
+    Things.print(randomRoom(Battle, level = 0))
 
-    println("Healers: ")
-    randomRoom(Healer).foreach(a => Things.print(a._2))
+    println("Healer: ")
+    Things.print(randomRoom(Healer))
   }
 
   Basic()
