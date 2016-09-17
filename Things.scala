@@ -34,14 +34,18 @@ object Things {
 
   def print(thing: Map[String, String]) = {
     // Print name, set and board
-    printf("%s [%s, %s, %s]", thing("Name"), thing("Level"), thing("Type"), thing("Set"))
+    // printf("%s [%s, %s, %s]", thing("Name"), thing("Level"), thing("Type"), thing("Set"))
+    printf("%s [%s, %s]", thing("Name"), thing getOrElse ("Level", thing("Health")), thing("Set"))
 
-    if (RoomBoards contains thing("Name"))
-      printf(" on %s", RoomBoards(thing("Name")).head)
+    val boards = RoomBoards ++ LordBoards
+    if (boards contains thing("Name"))
+      printf(" on %s", boards(thing("Name")).head)
     println()
 
     // Print monsters
-    RoomMonsters getOrElse (thing("Name"), Nil) foreach(a => printf("   %s\n", a))
+    if (thing contains "Wanderer")
+      printf("   [%s]\n", thing("Wanderer"))
+    (RoomMonsters ++ LordMonsters) getOrElse (thing("Name"), Nil) foreach(a => printf("   %s\n", a))
   }
 
   // ... just because I can... ?

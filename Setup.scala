@@ -17,6 +17,10 @@ object Setup extends App {
     r.getOrElse(scala.util.Random.shuffle(r.keys.toList).head, r.head._2)
   }
 
+  def randomLord : Map[String, String] = {
+    Things.Lords.getOrElse(scala.util.Random.shuffle(Things.Lords.keys.toList).head, Things.Lords.head._2)
+  }
+
   def Basic() {
     /*
      * Basic setup
@@ -39,6 +43,8 @@ object Setup extends App {
     Things.print(randomRoom(Battle, level = 1))
     Things.print(randomRoom(Healer))
     Things.print(randomRoom(Battle, level = 2))
+
+    Things.print(randomLord)
   }
 
   Basic()
