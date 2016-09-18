@@ -1,6 +1,6 @@
 object RoomType extends Enumeration {
   type RoomType = Value
-  val Battle, Merchant, Healer = Value
+  val Battle, Merchant, Healer, Passageway = Value
 }
 import RoomType._
 
